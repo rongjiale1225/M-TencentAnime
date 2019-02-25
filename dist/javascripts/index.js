@@ -86,14 +86,69 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/javascripts/controllers/app-bannner-controller.js":
+/*!***************************************************************!*\
+  !*** ./src/javascripts/controllers/app-bannner-controller.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const appBannnerView=__webpack_require__(/*! ../views/app-banner.html */ \"./src/javascripts/views/app-banner.html\")\r\n\r\n\r\nconst  render= () => {\r\n\r\n    $(\"#app #banner\").html(appBannnerView);\r\n    creatSwiper();\r\n\r\n    function creatSwiper(){\r\n        var mySwiper = new Swiper ('.swiper-container', {\r\n            loop: true,\r\n            // autoplay:1000,\r\n            // 如果需要分页器\r\n            pagination: '.swiper-pagination',\r\n          });  \r\n    }\r\n\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-bannner-controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/app-controller.js":
+/*!*******************************************************!*\
+  !*** ./src/javascripts/controllers/app-controller.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const appBannerController=__webpack_require__(/*! ./app-bannner-controller */ \"./src/javascripts/controllers/app-bannner-controller.js\");\r\nconst appHeaderController=__webpack_require__(/*! ./app-header-controller */ \"./src/javascripts/controllers/app-header-controller.js\");\r\n\r\n\r\nconst render = () => {\r\n    appHeaderController.render();\r\n    appBannerController.render();    \r\n}\r\n\r\nmodule.exports = { render }\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/app-header-controller.js":
+/*!**************************************************************!*\
+  !*** ./src/javascripts/controllers/app-header-controller.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const appHeaderView=__webpack_require__(/*! ../views/app-header.html */ \"./src/javascripts/views/app-header.html\");\r\n\r\n\r\n\r\nconst render = () => {\r\n      $('#app #header').html(appHeaderView)\r\n}\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-header-controller.js?");
+
+/***/ }),
+
 /***/ "./src/javascripts/index.js":
 /*!**********************************!*\
   !*** ./src/javascripts/index.js ***!
   \**********************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const appController = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\");\r\n\r\nappController.render();\r\n\r\n  \n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/views/app-banner.html":
+/*!***********************************************!*\
+  !*** ./src/javascripts/views/app-banner.html ***!
+  \***********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var mySwiper = new Swiper ('.swiper-container', {\r\n    loop: true,\r\n    autoplay:1000,\r\n    // 如果需要分页器\r\n    pagination: '.swiper-pagination',\r\n  })        \n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
+eval("module.exports = \"<div class=\\\"padding-top\\\"></div>            <div class=\\\"swiper-container\\\">                <div class=\\\"swiper-wrapper\\\">                    <div class=\\\"swiper-slide\\\"><img src=\\\"static/images/1.jpg\\\" alt=\\\"\\\"></div>                    <div class=\\\"swiper-slide\\\"><img src=\\\"static/images/2.jpg\\\" alt=\\\"\\\"></div>                    <div class=\\\"swiper-slide\\\"><img src=\\\"static/images/3.jpg\\\" alt=\\\"\\\"></div>                    <div class=\\\"swiper-slide\\\"><img src=\\\"static/images/4.jpg\\\" alt=\\\"\\\"></div>                    <div class=\\\"swiper-slide\\\"><img src=\\\"static/images/5.jpg\\\" alt=\\\"\\\"></div>                </div>                <!-- 如果需要分页器 -->                <div class=\\\"swiper-pagination\\\"></div>            </div>        </div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-banner.html?");
+
+/***/ }),
+
+/***/ "./src/javascripts/views/app-header.html":
+/*!***********************************************!*\
+  !*** ./src/javascripts/views/app-header.html ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<header class=\\\"title\\\">    <h1 class=\\\"logo\\\"></h1>    <a href=\\\"#\\\" class=\\\"search\\\"></a>    <a href=\\\"#\\\" class=\\\"menu\\\"></a></header>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-header.html?");
 
 /***/ })
 
