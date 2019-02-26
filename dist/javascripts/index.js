@@ -104,7 +104,7 @@ eval("const appBannnerView=__webpack_require__(/*! ../views/app-banner.html */ \
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const appBannerController=__webpack_require__(/*! ./app-bannner-controller */ \"./src/javascripts/controllers/app-bannner-controller.js\");\r\nconst appHeaderController=__webpack_require__(/*! ./app-header-controller */ \"./src/javascripts/controllers/app-header-controller.js\");\r\n\r\n\r\nconst render = () => {\r\n    appHeaderController.render();\r\n    appBannerController.render();    \r\n}\r\n\r\nmodule.exports = { render }\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-controller.js?");
+eval("const appBannerController=__webpack_require__(/*! ./app-bannner-controller */ \"./src/javascripts/controllers/app-bannner-controller.js\");\r\nconst appHeaderController=__webpack_require__(/*! ./app-header-controller */ \"./src/javascripts/controllers/app-header-controller.js\");\r\nconst appNavController=__webpack_require__(/*! ./app-nav-controller */ \"./src/javascripts/controllers/app-nav-controller.js\");\r\nconst appRecommendeoController=__webpack_require__(/*! ./app-recommendeo */ \"./src/javascripts/controllers/app-recommendeo.js\");\r\n\r\n\r\nconst render = () => {\r\n    appHeaderController.render();\r\n    appBannerController.render();  \r\n    appNavController.render();\r\n    appRecommendeoController.render();\r\n}\r\n\r\nmodule.exports = { render }\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-controller.js?");
 
 /***/ }),
 
@@ -116,6 +116,28 @@ eval("const appBannerController=__webpack_require__(/*! ./app-bannner-controller
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("const appHeaderView=__webpack_require__(/*! ../views/app-header.html */ \"./src/javascripts/views/app-header.html\");\r\n\r\n\r\n\r\nconst render = () => {\r\n      $('#app #header').html(appHeaderView)\r\n}\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-header-controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/app-nav-controller.js":
+/*!***********************************************************!*\
+  !*** ./src/javascripts/controllers/app-nav-controller.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\r\nconst appNavView=__webpack_require__(/*! ../views/app-nav.html */ \"./src/javascripts/views/app-nav.html\");\r\n\r\n\r\nconst render = () => {\r\n    $('#app .nav').html(appNavView);\r\n}\r\n\r\nmodule.exports={render}\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-nav-controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/app-recommendeo.js":
+/*!********************************************************!*\
+  !*** ./src/javascripts/controllers/app-recommendeo.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.html */ \"./src/javascripts/views/app-recommendeo.html\");\r\n\r\nconst render = () => {\r\n      $('#app .recommendeo').html(appRecommendeoView)\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-recommendeo.js?");
 
 /***/ }),
 
@@ -149,6 +171,28 @@ eval("module.exports = \"<div class=\\\"padding-top\\\"></div>            <div c
 /***/ (function(module, exports) {
 
 eval("module.exports = \"<header class=\\\"title\\\">    <h1 class=\\\"logo\\\"></h1>    <a href=\\\"#\\\" class=\\\"search\\\"></a>    <a href=\\\"#\\\" class=\\\"menu\\\"></a></header>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-header.html?");
+
+/***/ }),
+
+/***/ "./src/javascripts/views/app-nav.html":
+/*!********************************************!*\
+  !*** ./src/javascripts/views/app-nav.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<div class=\\\"classify\\\">        <div class=\\\"list-one\\\">            <a href=\\\"###\\\">                <i class=\\\"icon\\\"></i>                <span class=\\\"name\\\">分类</span>            </a>        </div>        <div class=\\\"list-two\\\">            <a href=\\\"###\\\">                <i class=\\\"icon\\\"></i>                <span class=\\\"name\\\">排行</span>            </a>        </div>        <div class=\\\"list-three\\\">            <a href=\\\"###\\\">                <i class=\\\"icon\\\"></i>                <span class=\\\"name\\\">追更</span>            </a>        </div>        <div class=\\\"list-four\\\">            <a href=\\\"###\\\">                <i class=\\\"icon\\\"></i>                <span class=\\\"name\\\">历史</span>            </a>        </div> </div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-nav.html?");
+
+/***/ }),
+
+/***/ "./src/javascripts/views/app-recommendeo.html":
+/*!****************************************************!*\
+  !*** ./src/javascripts/views/app-recommendeo.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<div class=\\\"sub-title\\\">        <div class=\\\"title\\\"></div>        <a class=\\\"more\\\" href=\\\"###\\\"></a>    </div>    <div class=\\\"comic-list\\\">        <div class=\\\"cover1\\\">            <a class=\\\"cover-link\\\" href=\\\"###\\\">                <div class=\\\"cover-img\\\">                    <img class=\\\"cover-img\\\" src=\\\"static/images/mh.jpg\\\" alt=\\\"\\\">                </div>                <div class=\\\"cover-txt\\\">                    <p class=\\\"top-txt\\\"></p>                    <p class=\\\"bottom-txt\\\"></p>                </div>            </a>        </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-recommendeo.html?");
 
 /***/ })
 

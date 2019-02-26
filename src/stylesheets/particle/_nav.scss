@@ -1,0 +1,99 @@
+.classify{
+    width: 100%;
+    height: 1.6rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+.classify div{
+    width: 2.133333rem;
+    height: 1.6rem;
+}
+.list-one a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.list-one .icon{
+    display: block;
+    width: .906667rem;
+    height: .906667rem;
+    background: url(../static/images/clas1.jpg)no-repeat;
+    background-size:.906667rem .906667rem;
+    margin:0 auto;
+    margin-top: .16rem;
+}
+.list-one .name{
+    display: block;
+    width: .906667rem;
+    height: .32rem;
+    margin:0 auto;
+    text-align: center;
+    margin-top:.08rem;
+}
+.list-two a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.list-two .icon{
+    display: block;
+    width: .906667rem;
+    height: .906667rem;
+    background: url(../static/images/clas2.jpg)no-repeat;
+    background-size:.906667rem .906667rem;
+    margin:0 auto;
+    margin-top: .16rem;
+}
+.list-two .name{
+    display: block;
+    width: .906667rem;
+    height: .32rem;
+    margin:0 auto;
+    text-align: center;
+    margin-top:.08rem;
+}
+.list-three a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.list-three .icon{
+    display: block;
+    width: .906667rem;
+    height: .906667rem;
+    background: url(../static/images/clas3.jpg)no-repeat;
+    background-size:.906667rem .906667rem;
+    margin:0 auto;
+    margin-top: .16rem;
+}
+.list-three .name{
+    display: block;
+    width: .906667rem;
+    height: .32rem;
+    margin:0 auto;
+    text-align: center;
+    margin-top:.08rem;
+}
+.list-four a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.list-four .icon{
+    display: block;
+    width: .906667rem;
+    height: .906667rem;
+    background: url(../static/images/clas4.jpg)no-repeat;
+    background-size:.906667rem .906667rem;
+    margin:0 auto;
+    margin-top: .16rem;
+}
+.list-four .name{
+    display: block;
+    width: .906667rem;
+    height: .32rem;
+    margin:0 auto;
+    text-align: center;
+    margin-top:.08rem;
+}

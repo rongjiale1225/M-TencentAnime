@@ -1,0 +1,99 @@
+.sub-title{
+    width: 100%;
+    height: 1.226667rem;
+    margin-top:.16rem;
+    position: relative;
+}
+.sub-title .title{
+    position: absolute;
+    left:.266667rem;
+    top:0;
+    width: 4rem;
+    height: 1.066667rem;
+    background: url(../static/images/title.png)no-repeat center;
+    background-size:4rem .8rem;
+}
+.sub-title .more{
+    width: 1.6rem;
+    height: .666667rem;
+    background: url(../static/images/more.png)no-repeat center;
+    position: absolute;
+    top:.266667rem;
+    right: .266667rem;
+    background-size:1.6rem;
+    height: .666667rem;
+}
+.comic-list{
+    width: 100%;
+    height: 10.826667rem;
+}
+.comic-list div{
+    float: left;
+}
+.comic-list .cover1{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover2{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover3{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover4{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover5{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover6{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: .4rem;
+    background: #fff;
+}
+.comic-list .cover-link{
+    display: block;
+    width: 100%;
+    height: 5.013333rem;
+}
+.comic-list .cover-img{
+    width: 100%;
+}
+.comic-list .cover-txt{
+    width: 100%;
+    height: .88rem;
+    text-align: center;
+    margin-top: .32rem;
+}
+.cover-txt .top-txt{
+    padding-top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #535252;
+    font-size: .373333rem;
+    margin-bottom: .133333rem;
+}
+.cover-txt .bottom-txt{
+    color: #969696;
+    font-size: .32rem;
+    margin-bottom: .32rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
