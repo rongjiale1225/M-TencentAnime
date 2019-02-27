@@ -1,4 +1,4 @@
-
+const porxy=require('http-proxy-middleware');
 
 const serverConfig = {
     livereload: {
@@ -8,6 +8,11 @@ const serverConfig = {
     open: false,
     port: 3000,
     middleware: [ // 中间件 http-proxy-middleware
+        porxy('/tencent',{
+            target:'https://m.ac.qq.com',
+            changeOrigin:true,
+            pathRewrite:{'^/tencent' : ''}
+        })
         
     ],
     proxies: [

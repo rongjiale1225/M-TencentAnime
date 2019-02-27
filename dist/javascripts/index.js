@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/javascripts/api/index.js":
+/*!**************************************!*\
+  !*** ./src/javascripts/api/index.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// 封装api是为了统一处理跨域路径 还有 对请求回来的数据的处理\r\nconst api = {\r\n    request ({\r\n        url, data, methods,\r\n        source\r\n    }, mock) {\r\n        return $.ajax({\r\n            // url: 'http://m.maoyan.com/ajax/movieOnInfoList?token=',\r\n            url: (mock ? '' : (source || '/tencent') ) + url,\r\n            data: data || {},\r\n            methods: methods || 'get',\r\n            success: (res) => {\r\n                return res\r\n            },\r\n            error: (error) => {\r\n                console.log('请求出错了', error)\r\n            }\r\n        }) \r\n    },\r\n}\r\n\r\nmodule.exports = api\n\n//# sourceURL=webpack:///./src/javascripts/api/index.js?");
+
+/***/ }),
+
 /***/ "./src/javascripts/controllers/app-bannner-controller.js":
 /*!***************************************************************!*\
   !*** ./src/javascripts/controllers/app-bannner-controller.js ***!
@@ -137,7 +148,7 @@ eval("\r\nconst appNavView=__webpack_require__(/*! ../views/app-nav.html */ \"./
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.html */ \"./src/javascripts/views/app-recommendeo.html\");\r\n\r\nconst render = () => {\r\n      $('#app .recommendeo').html(appRecommendeoView)\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-recommendeo.js?");
+eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.html */ \"./src/javascripts/views/app-recommendeo.html\");\r\nconst {getRecommendeoData}=__webpack_require__(/*! ../moudels/app-index-moudel */ \"./src/javascripts/moudels/app-index-moudel.js\");\r\n\r\nconst render = async () => {\r\n\r\n    let recommendeoList=await getRecommendeoData();\r\n    console.log(JSON.parse(recommendeoList));\r\n      $('#app .recommendeo').html(appRecommendeoView)\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-recommendeo.js?");
 
 /***/ }),
 
@@ -149,6 +160,17 @@ eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("const appController = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\");\r\n\r\nappController.render();\r\n\r\n  \n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/moudels/app-index-moudel.js":
+/*!*****************************************************!*\
+  !*** ./src/javascripts/moudels/app-index-moudel.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/index.js\");\r\n\r\nconst  getRecommendeoData= () => {\r\n    return api.request({url:'/Recommend/get/?num=6&adpos=910&t=1551256663782&'});\r\n}\r\n\r\n\r\nmodule.exports={\r\n    getRecommendeoData\r\n}\n\n//# sourceURL=webpack:///./src/javascripts/moudels/app-index-moudel.js?");
 
 /***/ }),
 

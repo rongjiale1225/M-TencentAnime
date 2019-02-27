@@ -6,7 +6,7 @@ const api = {
     }, mock) {
         return $.ajax({
             // url: 'http://m.maoyan.com/ajax/movieOnInfoList?token=',
-            url: (mock ? '' : (source || '/maoyan') ) + url,
+            url: (mock ? '' : (source || '/tencent') ) + url,
             data: data || {},
             methods: methods || 'get',
             success: (res) => {
@@ -17,9 +17,6 @@ const api = {
             }
         }) 
     },
-    mock (options) {
-        return this.request(options, true)
-    }
 }
 
 module.exports = api
