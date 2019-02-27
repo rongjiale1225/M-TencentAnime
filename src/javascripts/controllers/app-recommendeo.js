@@ -5,7 +5,10 @@ const render = async () => {
 
     let recommendeoList=await getRecommendeoData();
     console.log(JSON.parse(recommendeoList));
-      $('#app .recommendeo').html(appRecommendeoView)
+    let template = Handlebars.compile(appRecommendeoView)
+      $('#app .recommendeo').html(
+        template(JSON.parse(recommendeoList))
+      )
 }
 
 module.exports={render};

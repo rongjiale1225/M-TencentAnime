@@ -148,7 +148,7 @@ eval("\r\nconst appNavView=__webpack_require__(/*! ../views/app-nav.html */ \"./
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.html */ \"./src/javascripts/views/app-recommendeo.html\");\r\nconst {getRecommendeoData}=__webpack_require__(/*! ../moudels/app-index-moudel */ \"./src/javascripts/moudels/app-index-moudel.js\");\r\n\r\nconst render = async () => {\r\n\r\n    let recommendeoList=await getRecommendeoData();\r\n    console.log(JSON.parse(recommendeoList));\r\n      $('#app .recommendeo').html(appRecommendeoView)\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-recommendeo.js?");
+eval("const appRecommendeoView=__webpack_require__(/*! ../views/app-recommendeo.html */ \"./src/javascripts/views/app-recommendeo.html\");\r\nconst {getRecommendeoData}=__webpack_require__(/*! ../moudels/app-index-moudel */ \"./src/javascripts/moudels/app-index-moudel.js\");\r\n\r\nconst render = async () => {\r\n\r\n    let recommendeoList=await getRecommendeoData();\r\n    console.log(JSON.parse(recommendeoList));\r\n    let template = Handlebars.compile(appRecommendeoView)\r\n      $('#app .recommendeo').html(\r\n        template(JSON.parse(recommendeoList))\r\n      )\r\n}\r\n\r\nmodule.exports={render};\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-recommendeo.js?");
 
 /***/ }),
 
@@ -170,7 +170,7 @@ eval("const appController = __webpack_require__(/*! ./controllers/app-controller
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/index.js\");\r\n\r\nconst  getRecommendeoData= () => {\r\n    return api.request({url:'/Recommend/get/?num=6&adpos=910&t=1551256663782&'});\r\n}\r\n\r\n\r\nmodule.exports={\r\n    getRecommendeoData\r\n}\n\n//# sourceURL=webpack:///./src/javascripts/moudels/app-index-moudel.js?");
+eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/index.js\");\r\n\r\nconst  getRecommendeoData= () => {\r\n    return api.request({url:'Recommend/get/?num=6&adpos=910&t=1551256663782&'});\r\n}\r\n\r\n\r\nmodule.exports={\r\n    getRecommendeoData\r\n}\n\n//# sourceURL=webpack:///./src/javascripts/moudels/app-index-moudel.js?");
 
 /***/ }),
 
@@ -214,7 +214,7 @@ eval("module.exports = \"<div class=\\\"classify\\\">        <div class=\\\"list
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<div class=\\\"sub-title\\\">        <div class=\\\"title\\\"></div>        <a class=\\\"more\\\" href=\\\"###\\\"></a>    </div>    <div class=\\\"comic-list\\\">        <div class=\\\"cover1\\\">            <a class=\\\"cover-link\\\" href=\\\"###\\\">                <div class=\\\"cover-img\\\">                    <img class=\\\"cover-img\\\" src=\\\"static/images/mh.jpg\\\" alt=\\\"\\\">                </div>                <div class=\\\"cover-txt\\\">                    <p class=\\\"top-txt\\\"></p>                    <p class=\\\"bottom-txt\\\"></p>                </div>            </a>        </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-recommendeo.html?");
+eval("module.exports = \"<div class=\\\"sub-title\\\">        <div class=\\\"title\\\"></div>        <a class=\\\"more\\\" href=\\\"###\\\"></a>    </div>    <div class=\\\"comic-list\\\">        {{#each list}}        <div class=\\\"cover1\\\">            <a class=\\\"cover-link\\\" href=\\\"###\\\">                <div class=\\\"cover-img\\\">                    <img class=\\\"cover-img\\\" src={{cover_url}} alt=\\\"\\\">                </div>                <div class=\\\"cover-txt\\\">                    <p class=\\\"top-txt\\\">{{title}}</p>                    <p class=\\\"bottom-txt\\\">{{short_desc}}</p>                </div>            </a>        </div>        {{/each}}</div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-recommendeo.html?");
 
 /***/ })
 

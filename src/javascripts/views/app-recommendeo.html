@@ -3,15 +3,17 @@
         <a class="more" href="###"></a>
     </div>
     <div class="comic-list">
+        {{#each list}}
         <div class="cover1">
             <a class="cover-link" href="###">
                 <div class="cover-img">
-                    <img class="cover-img" src="static/images/mh.jpg" alt="">
+                    <img class="cover-img" src={{cover_url}} alt="">
                 </div>
                 <div class="cover-txt">
-                    <p class="top-txt"></p>
-                    <p class="bottom-txt"></p>
+                    <p class="top-txt">{{title}}</p>
+                    <p class="bottom-txt">{{short_desc}}</p>
                 </div>
             </a>
         </div>
+        {{/each}}
 </div>
