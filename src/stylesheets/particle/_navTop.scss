@@ -1,0 +1,84 @@
+.navBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 1.333333rem;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    display: block;
+    .navTop{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 21;
+        background: rgba($color: #000000, $alpha: 0.4);
+        transition: opacity 1s ease;
+        opacity: 0;
+    }
+    .mask{
+        width:100%;
+        height: 5.333333rem;
+        background: #F5F5EE;
+        position: relative;
+        z-index: 52;
+        transition: all 1s ease;
+        transform: translateY(-5.333333rem);
+        .nav-list{
+           padding-top: .266667rem;
+           padding-bottom: .106667rem;
+           margin-top: 1px;
+           .item{
+               display: inline-block;
+               width: 28%;
+               height: 1.6rem;
+               margin-left: 4%;
+           }
+           .item a{
+            display: block;
+            height: 1.466667rem;
+            width: .8rem;
+            margin: 0 auto;
+            padding:.133333rem;
+            padding-bottom: 0;
+            text-align: center;
+            line-height: 80px;
+           }
+           .item:nth-of-type(1) a{
+             background: url(../static/images/bj.png) no-repeat -5.333333rem -1.28rem;
+             background-size: 7.893333rem 3.733333rem;
+           }
+           .item:nth-of-type(2) a{
+            background: url(../static/images/bj.png) no-repeat -6.32rem -1.28rem;
+            background-size: 7.893333rem 3.733333rem;
+          }
+          .item:nth-of-type(3) a{
+            background: url(../static/images/bj.png) no-repeat -3.2rem -1.28rem;
+            background-size: 7.893333rem 3.733333rem;
+          }
+          .item:nth-of-type(4) a{
+            background: url(../static/images/bj.png) no-repeat -.933333rem -2.666667rem;
+            background-size: 7.893333rem 3.733333rem;
+          }
+          .item:nth-of-type(5) a{
+            background: url(../static/images/bj.png) no-repeat .08rem -2.773333rem;
+            background-size: 7.893333rem 3.733333rem;
+          }
+          .item:nth-of-type(6) a{
+            background: url(../static/images/bj.png) no-repeat -4.266667rem -1.28rem;
+            background-size: 7.893333rem 3.733333rem;
+          }
+        }
+        .ownBtn{
+            display: block;
+            width: 7.893333rem;
+            height: 1.226667rem;
+            margin:0 auto;
+            // border-radius: .266667rem;
+            background: url(../static/images/bj.png) no-repeat;
+            background-size: 7.893333rem 3.733333rem;
+        }
+    }
+}

@@ -1,9 +1,9 @@
-.title{
+.headerTitle{
     width: 100%;
     height: 1.333333rem;
     background-color: #fff;
     position: fixed;
-    z-index: 10;
+    z-index: 50;
     // flex-grow: 0; flex-shrink: 0;
     .logo{
         width: 3.2rem;
@@ -29,6 +29,7 @@
         position: absolute;
         right: 0.0666666rem;
         top: .133333rem;
+        z-index: 51;
         background:url(../static/images/bj.png) no-repeat -2.7266666rem -2.633333rem;
         background-size: 7.89333rem  3.733333rem;
     }

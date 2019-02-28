@@ -1,6 +1,9 @@
 .main{
     width: 100%;
+    position: relative;
+    z-index: 22;
     background:#F5F5EE;
+    transition: all 1s ease;
     flex-grow: 1; flex-shrink: 1;
     overflow: auto;
     .padding-top{
