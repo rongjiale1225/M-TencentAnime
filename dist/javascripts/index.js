@@ -225,7 +225,7 @@ eval("module.exports = \"<div class=\\\"classify\\\">        <div class=\\\"list
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"    <div class=\\\"navTop\\\"></div>    <div class=\\\"mask\\\">        <ul class=\\\"nav-list\\\">            <li class=\\\"item\\\"><a href=\\\"###\\\">首页</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">收藏</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">历史</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">分类</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">排行</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">追更</a></li>        </ul>        <a class=\\\"ownBtn\\\" href=\\\"#\\\"></a>    </div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-navTop.html?");
+eval("module.exports = \"    <div class=\\\"navTop\\\"></div>    <div class=\\\"mask\\\">        <ul class=\\\"nav-list\\\">            <li class=\\\"item\\\"><a href=\\\"###\\\">首页</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">收藏</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">历史</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">分类</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">排行</a></li>            <li class=\\\"item\\\"><a href=\\\"###\\\">追更</a></li>        </ul>        <div class=\\\"my\\\"><a class=\\\"ownBtn\\\" href=\\\"#\\\"></a></div>    </div>\"\n\n//# sourceURL=webpack:///./src/javascripts/views/app-navTop.html?");
 
 /***/ }),
 

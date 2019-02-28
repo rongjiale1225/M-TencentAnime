@@ -23,13 +23,15 @@
         height: 5.333333rem;
         background: #F5F5EE;
         position: relative;
-        z-index: 52;
+        z-index: 22;
         transition: all 1s ease;
         transform: translateY(-5.333333rem);
         .nav-list{
            padding-top: .266667rem;
            padding-bottom: .106667rem;
            margin-top: 1px;
+           width: 100%;
+           position: absolute;
            .item{
                display: inline-block;
                width: 28%;
@@ -44,7 +46,7 @@
             padding:.133333rem;
             padding-bottom: 0;
             text-align: center;
-            line-height: 80px;
+            line-height: 2.133333rem;
            }
            .item:nth-of-type(1) a{
              background: url(../static/images/bj.png) no-repeat -5.333333rem -1.28rem;
@@ -71,14 +73,19 @@
             background-size: 7.893333rem 3.733333rem;
           }
         }
-        .ownBtn{
+        .my{
+          width: 100%;
+          position: absolute;
+          top: 3.573333rem;
+          .ownBtn{
             display: block;
             width: 7.893333rem;
             height: 1.226667rem;
-            margin:0 auto;
+            margin: 0 auto;
             // border-radius: .266667rem;
             background: url(../static/images/bj.png) no-repeat;
             background-size: 7.893333rem 3.733333rem;
+        }
         }
     }
 }
